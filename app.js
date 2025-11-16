@@ -47,3 +47,26 @@ $(document).ready(function () {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }
 });
+
+// Delete task
+$(document).on("click", ".deleteBtn", function () {
+    $(this).parent().fadeOut(300, function () {
+        $(this).remove();
+        saveTasks();
+    });
+});
+
+
+function addTaskToDOM(text, completed) {
+    const taskHTML = `
+        <li style="display:none;">
+            <span class="task ${completed ? 'complete' : ''}">${text}</span>
+            <button class="deleteBtn">X</button>
+        </li>
+    `;
+    $("#taskList").append(taskHTML);
+    $("#taskList li:last").fadeIn(300);
+}
+
+
+
