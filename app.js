@@ -19,23 +19,25 @@ $(document).ready(function () {
         saveTasks();
     });
 
-    // Delete task
+    // Delete task with slide + fade
     $(document).on("click", ".deleteBtn", function () {
-        $(this).parent().remove();
-        saveTasks();
+        $(this).parent().slideUp(400, function () {
+            $(this).remove();
+            saveTasks();
+        });
     });
 
-    // Add task to DOM
-function addTaskToDOM(text, completed) {
-    const taskHTML = `
-        <li style="display:none;">
-            <span class="task ${completed ? 'complete' : ''}">${text}</span>
-            <button class="deleteBtn">X</button>
-        </li>
-    `;
-    $("#taskList").append(taskHTML);
-    $("#taskList li:last").fadeIn(500); // make fade slower (0.5s) for better visualization
-}
+    // Add task to DOM with fade-in
+    function addTaskToDOM(text, completed) {
+        const taskHTML = `
+            <li style="display:none;">
+                <span class="task ${completed ? 'complete' : ''}">${text}</span>
+                <button class="deleteBtn">X</button>
+            </li>
+        `;
+        $("#taskList").append(taskHTML);
+        $("#taskList li:last").fadeIn(500);
+    }
 
     // Save tasks to localStorage
     function saveTasks() {
@@ -48,14 +50,3 @@ function addTaskToDOM(text, completed) {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }
 });
-
-// Delete task
-$(document).on("click", ".deleteBtn", function () {
-    $(this).parent().fadeOut(300, function () {
-        $(this).remove();
-        saveTasks();
-    });
-});
-
-
-
