@@ -26,15 +26,16 @@ $(document).ready(function () {
     });
 
     // Add task to DOM
-    function addTaskToDOM(text, completed) {
-        const taskHTML = `
-            <li>
-                <span class="task ${completed ? 'complete' : ''}">${text}</span>
-                <button class="deleteBtn">X</button>
-            </li>
-        `;
-        $("#taskList").append(taskHTML);
-    }
+function addTaskToDOM(text, completed) {
+    const taskHTML = `
+        <li style="display:none;">
+            <span class="task ${completed ? 'complete' : ''}">${text}</span>
+            <button class="deleteBtn">X</button>
+        </li>
+    `;
+    $("#taskList").append(taskHTML);
+    $("#taskList li:last").fadeIn(500); // make fade slower (0.5s) for better visualization
+}
 
     // Save tasks to localStorage
     function saveTasks() {
@@ -55,18 +56,6 @@ $(document).on("click", ".deleteBtn", function () {
         saveTasks();
     });
 });
-
-
-function addTaskToDOM(text, completed) {
-    const taskHTML = `
-        <li style="display:none;">
-            <span class="task ${completed ? 'complete' : ''}">${text}</span>
-            <button class="deleteBtn">X</button>
-        </li>
-    `;
-    $("#taskList").append(taskHTML);
-    $("#taskList li:last").fadeIn(300);
-}
 
 
 
