@@ -33,6 +33,17 @@ Fully functional with **Add, Delete, Mark Complete**, and **tasks persist after 
 - Delete tasks with smooth slide/fade animation  
 - Tasks persist after page refresh using `localStorage`  
 - Modern UI with hover effects and responsive design  
+-----
+## 📸 Features Overview (Screenshots)
+
+### ➕ Add New Task
+<img src="add-task.png" width="400" />
+
+### ❌ Delete Task
+<img src="delete-task.png" width="400" />
+
+### ✔️ Mark Task as Complete
+<img src="task-complete.png" width="400" />
 
 ---
 
