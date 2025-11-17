@@ -7,7 +7,7 @@ Fully functional with **Add, Delete, Mark Complete**, and **tasks persist after 
 
 ## 🌐 Live Demo
 
-[View Live App](https://heng03a.github.io/<your-repo-name>/)
+[View Live App](https://heng03a.github.io/jQuery-todo-app/)
 
 ---
 
