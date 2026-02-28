@@ -28,16 +28,6 @@ $(document).ready(function () {
     renderTasks();
   });
 
-  // Clear completed
-  $("#clear-completed-btn").on("click", function () {
-    // phua commented/added codes below on 1/3/2026
-    //tasks = tasks.filter((t) => !t.completed);
-    if (confirmClearCompleted()) {
-      tasks = tasks.filter((t) => !t.completed);
-      saveTasks();
-      renderTasks();
-    }
-  });
 
   // Delegated events for dynamically created items
   $("#task-list")
@@ -46,6 +36,18 @@ $(document).ready(function () {
       const id = $(this).closest(".task-item").data("id");
       toggleTaskCompleted(id);
     })
+
+      // Clear completed
+    $("#clear-completed-btn").on("click", function () {
+      // phua commented/added codes below on 1/3/2026
+      //tasks = tasks.filter((t) => !t.completed);
+      if (confirmClearCompleted()) {
+        tasks = tasks.filter((t) => !t.completed);
+        saveTasks();
+        renderTasks();
+      }
+    });
+
     // delete task
     $(document).on("click", ".delete-task-btn", function () {
     const id = $(this).closest(".task-item").data("id");
