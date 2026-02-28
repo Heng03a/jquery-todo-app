@@ -1,7 +1,3 @@
-function confirmDelete() {
-    return confirm("Are you sure you want to delete this task?");
-}
-
 // Key for localStorage
 const STORAGE_KEY = "jquery_todo_tasks";
 
@@ -47,22 +43,13 @@ $(document).ready(function () {
       toggleTaskCompleted(id);
     })
     // delete task
-    //.on("click", ".delete-task-btn", function () {
-    //  const id = $(this).closest(".task-item").data("id");
-    //  deleteTask(id);
-    //});
-    $(".delete-btn").on("click", function () {
-    const id = $(this).data("id");
+    $(document).on("click", ".delete-task-btn", function () {
+    const id = $(this).closest(".task-item").data("id");
 
-    // confirmed = confirm("Are you sure you want to delete this task?");
-
-    //if (confirmed) {
-    //    deleteTask(id);
-    //}
     if (confirmDelete()) {
-    deleteTask(id);
-}
-});
+      deleteTask(id);
+    }
+  });
 });
 
 /* -------------------------------
@@ -100,6 +87,10 @@ function deleteTask(id) {
   tasks = tasks.filter((t) => t.id !== id);
   saveTasks();
   renderTasks();
+}
+
+function confirmDelete() {
+    return confirm("Are you sure you want to delete this task?");
 }
 
 /* -------------------------------
