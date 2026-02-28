@@ -37,16 +37,25 @@ $(document).ready(function () {
       toggleTaskCompleted(id);
     })
 
-      // Clear completed
-    $(document).on("click", ".clear-completed-btn", function () {
-      // phua commented/added codes below on 1/3/2026
-      //tasks = tasks.filter((t) => !t.completed);
+    // Clear completed
+    $("#clear-completed-btn").on("click", function () {
+
+      console.log("Inside ClearCompleted-before Confirm Prompt");
+
       if (confirmClearCompleted()) {
         tasks = tasks.filter((t) => !t.completed);
         saveTasks();
         renderTasks();
       }
+
+      console.log("Inside ClearCompleted-after Confirm Prompt");
     });
+
+    // sort change Listener
+    $("#sort-select").on("change", function () {
+    renderTasks();
+    });
+
 
     // delete task
     $(document).on("click", ".delete-task-btn", function () {
@@ -72,7 +81,9 @@ function addTaskFromInput() {
     id: Date.now(),
     text,
     completed: false,
-  };
+    createdAt: Date.now()
+}
+
 
   tasks.push(newTask);
   saveTasks();
@@ -103,6 +114,29 @@ function confirmClearCompleted() {
     return confirm("Are you sure you want to Clear this Completed task?");
 }
 
+
+function sortTasks(tasksArray, type) {
+
+  const sorted = [...tasksArray]; // shallow copy (no mutation)
+
+  switch (type) {
+    case "newest":
+      return sorted.sort((a, b) => b.createdAt - a.createdAt);
+
+    case "oldest":
+      return sorted.sort((a, b) => a.createdAt - b.createdAt);
+
+    case "completed":
+      return sorted.sort((a, b) => b.completed - a.completed);
+
+    case "active":
+      return sorted.sort((a, b) => a.completed - b.completed);
+
+    default:
+      return sorted;
+  }
+}
+
 /* -------------------------------
    Rendering
 --------------------------------*/
@@ -111,19 +145,28 @@ function renderTasks() {
   const list = $("#task-list");
   list.empty();
 
-  let filtered = tasks;
+  // 1️⃣ Filter first
+  let filteredTasks = tasks;
+
   if (currentFilter === "active") {
-    filtered = tasks.filter((t) => !t.completed);
+    filteredTasks = tasks.filter((t) => !t.completed);
   } else if (currentFilter === "completed") {
-    filtered = tasks.filter((t) => t.completed);
+    filteredTasks = tasks.filter((t) => t.completed);
   }
 
-  if (filtered.length === 0) {
-    list.append(
-      `<li class="task-item empty"><span class="task-text">No tasks to show.</span></li>`
-    );
+  // 2️⃣ Then sort filtered results
+  const sortType = $("#sort-select").val() || "newest";
+  const sortedTasks = sortTasks(filteredTasks, sortType);
+
+  // 3️⃣ Render sorted + filtered
+  if (sortedTasks.length === 0) {
+    list.append(`
+      <li class="task-item empty">
+        <span class="task-text">No tasks to show.</span>
+      </li>
+    `);
   } else {
-    filtered.forEach((task) => {
+    sortedTasks.forEach((task) => {
       const completedClass = task.completed ? "completed" : "";
       const checkIcon = task.completed ? "✓" : "";
 
