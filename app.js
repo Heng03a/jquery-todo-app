@@ -38,7 +38,7 @@ $(document).ready(function () {
     })
 
       // Clear completed
-    $("#clear-completed-btn").on("click", function () {
+    $(document).on("click", ".clear-completed-btn", function () {
       // phua commented/added codes below on 1/3/2026
       //tasks = tasks.filter((t) => !t.completed);
       if (confirmClearCompleted()) {
