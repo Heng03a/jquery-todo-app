@@ -140,7 +140,7 @@ function sortTasks(tasksArray, type) {
 /* -------------------------------
    Rendering
 --------------------------------*/
-
+// refactor: render pipeline (filter → sort → render)
 function renderTasks() {
   const list = $("#task-list");
   list.empty();
