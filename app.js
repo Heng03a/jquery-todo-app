@@ -32,7 +32,7 @@ $(document).ready(function () {
   $("#clear-completed-btn").on("click", function () {
     // phua commented/added codes below on 1/3/2026
     //tasks = tasks.filter((t) => !t.completed);
-    if (confirmClearComplete()) {
+    if (confirmClearCompleted()) {
       tasks = tasks.filter((t) => !t.completed);
       saveTasks();
       renderTasks();
