@@ -30,9 +30,13 @@ $(document).ready(function () {
 
   // Clear completed
   $("#clear-completed-btn").on("click", function () {
-    tasks = tasks.filter((t) => !t.completed);
-    saveTasks();
-    renderTasks();
+    // phua commented/added codes below on 1/3/2026
+    //tasks = tasks.filter((t) => !t.completed);
+    if (confirmClearComplete()) {
+      tasks = tasks.filter((t) => !t.completed);
+      saveTasks();
+      renderTasks();
+    }
   });
 
   // Delegated events for dynamically created items
@@ -91,6 +95,10 @@ function deleteTask(id) {
 
 function confirmDelete() {
     return confirm("Are you sure you want to delete this task?");
+}
+
+function confirmClearCompleted() {
+    return confirm("Are you sure you want to Clear this Completed task?");
 }
 
 /* -------------------------------
