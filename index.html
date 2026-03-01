@@ -37,12 +37,47 @@
         </div>
       </section>
 
-      <select id="sort-select">
-      <option value="newest">Newest</option>
-      <option value="oldest">Oldest</option>
-      <option value="completed">Completed First</option>
-      <option value="active">Active First</option>
-      </select>
+      <div class="control-bar">
+
+        <div class="sort-group">
+          <label for="sort-select">Sort</label>
+        <!-- Keep native select for compatibility + state -->
+        <select id="sort-select" class="sr-only" aria-label="Sort tasks">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="completed">Completed First</option>
+          <option value="active">Active First</option>
+        </select>
+
+        <!-- Custom dropdown (premium UI) -->
+        <div class="sort-dd" id="sort-dd">
+          <button
+            type="button"
+            class="sort-dd__btn"
+            id="sort-dd-btn"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="sort-dd-list"
+          >
+            <span class="sort-dd__label">Newest</span>
+            <span class="sort-dd__chev" aria-hidden="true">▾</span>
+          </button>
+
+          <ul
+            class="sort-dd__list"
+            id="sort-dd-list"
+            role="listbox"
+            tabindex="-1"
+            aria-label="Sort options"
+          >
+            <li class="sort-dd__opt" role="option" data-value="newest" aria-selected="true">Newest</li>
+            <li class="sort-dd__opt" role="option" data-value="oldest" aria-selected="false">Oldest</li>
+            <li class="sort-dd__opt" role="option" data-value="completed" aria-selected="false">Completed First</li>
+            <li class="sort-dd__opt" role="option" data-value="active" aria-selected="false">Active First</li>
+          </ul>
+        </div>
+    </div>
+  </div>
       <!-- Input Row -->
       <section class="input-row">
         <input
