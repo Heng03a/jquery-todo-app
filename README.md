@@ -1,44 +1,134 @@
 # jQuery To-Do List App
 
-A modern, interactive To-Do List web app built with **HTML, CSS, jQuery**, and **localStorage**.  
-Fully functional with **Add, Delete, Mark Complete**, and **tasks persist after page refresh**.  
+- A modern, interactive To-Do List web app built with **HTML, CSS, jQuery**, and **localStorage**.  
+- Fully functional with **Add, Delete, Mark Complete**, and **tasks persist after page refresh**.  
 
 ---
-
 ## 🌐 Live Demo
 
-[View Live App](https://heng03a.github.io/jQuery-To-Do List)
+* 🔗 **Frontend :** https://heng03a.github.io/jquery-todo-app/
 
+## 📂 Repository
+* 🔗 **GitHub Repository (Frontend):**
+
+## 🛠 Tech Stack
+- HTML5
+- CSS3
+- JavaScript
+- jQuery
 ---
 
 ## 📸 Screenshots
 
-**Add Task & Hover Effects**  
+**Add Task**  
 ![Add Task](screenshots/add-task.png)
-
-**Delete Task & Slide/Fade Animation**  
-![Delete Task](screenshots/delete-task.png)
 
 **Task Completed**  
 ![Task Completed](screenshots/task-complete.png)
 
-> You can create a `screenshots` folder in your repo and upload these images.
+
+**Sort Completed Task First**  
+![Clear Completed Task](screenshots/sort_completed_first.png)
+
+**Clear completed task**  
+![Clear Completed Task](screenshots/clear_completed_task.png)
 
 ---
 
-## ⚡ Features
-
-- Add new tasks  
-- Mark tasks as complete  
-- Delete tasks with smooth slide/fade animation  
-- Tasks persist after page refresh using `localStorage`  
-- Modern UI with hover effects and responsive design  
+## ✨ Key Functional Features
+* Add new tasks
+* Mark tasks complete / undo
+* Clear completed Task
+* Sort by: 
+* Newest
+* Oldest
+* Completed First
+* Active First
+* Tasks persist after page refresh using `localStorage`  
+* Modern UI with hover effects and responsive design  
 
 ---
+### Responsive Design Strategy
 
-## 🛠️ How to Run
+- This application uses a **mobile-first responsive CSS architecture**.
 
-1. Clone the repository:
+* Base styles are designed for small screens without relying on media queries.
+* Layouts use flexible units (`rem`, `%`) and modern layout systems (`flexbox`) to adapt naturally across screen sizes.
+* Media queries are applied using `min-width` breakpoints to progressively enhance the interface for larger viewports.
+
+## Key design decisions include:
+
+* A global reset using `box-sizing: border-box` to ensure consistent layout calculations.
+* A responsive page wrapper with fluid width and controlled maximum width for desktop readability.
+* Vertical stacking for form controls on mobile, enhanced to horizontal layouts on larger screens.
+* Touch-friendly spacing and scalable typography to support usability on all devices.
+
+- This approach ensures the application works **anytime, anywhere, on any device**, - without duplicating layout logic or relying on device-specific assumptions.
+
+---
+## 📱 Responsive & Cross-Browser Validation
+* Mobile-first  UI design layout
+
+## 📱 Responsive Design Proof
+- Tested on Chrome, Edge, Firefox
+- Flexbox-based layout
+- Overcome Responsive container constraints
+
+### Desktop View
+![Desktop Screenshot](docs/proof/Responsive/Desktop.png)
+
+### Tablet View
+![Tablet Screenshot](docs/proof/Responsive/Tablet.png)
+
+### Mobile View
+![Mobile Screenshot](docs/proof/Responsive/Mobile.png)
+
+## 📱 Responsive Design Implementation
+- This application was built using a mobile-first design philosophy.
+- Core Responsive Characteristics
+* Flexible layout containers
+* Centered content wrapper
+* Adaptive button stacking on smaller screens
+* Touch-friendly controls
+* Consistent spacing & alignment
+* No layout shift across breakpoints
+
+## Breakpoint Strategy
+* Mobile: 360px+
+* Tablet: 768px+
+* Desktop: 1024px+
+The layout maintains structural integrity across device sizes.
 
 
-git clone https://github.com/heng03a/jQuery o-Do List.git
+### UX Enhancements
+* Status indicator legend
+* Stable button alignment
+* Clear visual hierarchy
+* Clean typography and spacing
+
+## 🌐 Cross-Browser Compatibility
+
+-Tested on:
+
+- Google Chrome (latest)
+- Microsoft Edge (latest)
+- Firefox (latest)
+
+-All layout and interactive functionality are working consistently across modern browsers.
+
+## 📱 Cross-browser Reliability Proof
+### Google Chrome
+![Google Chrome Screenshot](docs/proof/cross-browser/Google_Chrome.png)
+
+### Microsoft Edge
+![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_Edge.png)
+
+### Firefox
+![Firefox Screenshot](docs/proof/cross-browser/Firefox.png)
+
+
+## 🚀 Challenges & Solutions
+
+
+## 📈 Improvements / Future Enhancements
+
