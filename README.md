@@ -144,15 +144,15 @@ The layout maintains structural integrity across device sizes.
 | Google | Microsoft | Firefox |
 | Chrome | Edge      | Firefox |
 |--------|-----------|---------|
-| ![Google Chrome Screenshot](docs/proof/cross-browser/Google_Chrome.png) | ![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_Edge.png) | ![Firefox Screenshot](docs/proof/cross-browser/Firefox.png) |
+| ![Google Chrome Screenshot](docs/proof/cross-browser/Google_chrome.png) | ![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_edge.png) | ![Firefox Screenshot](docs/proof/cross-browser/Firefox.png) |
 
 ### Proof Screens - Vertical
 
 ### Google Chrome
-![Google Chrome Screenshot](docs/proof/cross-browser/Google_Chrome.png)
+![Google Chrome Screenshot](docs/proof/cross-browser/Google_chrome.png)
 
 ### Microsoft Edge
-![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_Edge.png)
+![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_edge.png)
 
 ### Firefox
 ![Firefox Screenshot](docs/proof/cross-browser/Firefox.png)
