@@ -139,23 +139,11 @@ The layout maintains structural integrity across device sizes.
 -All layout and interactive functionality are working consistently across modern browsers.
 
 ## 📱 Cross-browser Reliability Proof
-### Proof Screens - Horizontal view
 
-| Google | Microsoft | Firefox |
-| Chrome | Edge      | Firefox |
-|--------|-----------|---------|
+
+| Google Chrome | Microsoft Edge | Firefox |
+|---------------|----------------|---------|
 | ![Google Chrome Screenshot](docs/proof/cross-browser/Google_chrome.png) | ![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_edge.png) | ![Firefox Screenshot](docs/proof/cross-browser/Firefox.png) |
-
-### Proof Screens - Vertical
-
-### Google Chrome
-![Google Chrome Screenshot](docs/proof/cross-browser/Google_chrome.png)
-
-### Microsoft Edge
-![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_edge.png)
-
-### Firefox
-![Firefox Screenshot](docs/proof/cross-browser/Firefox.png)
 
 
 ## 🚀 Challenges & Solutions
