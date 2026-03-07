@@ -1,7 +1,11 @@
 # jQuery To-Do List App
 
+## 🔍 Project Overview
+
 - A modern, interactive To-Do List web app built with **HTML, CSS, jQuery**, and **localStorage**.  
 - Fully functional with **Add, Delete, Mark Complete**, and **tasks persist after page refresh**.  
+- Implements mobile-first responsive design with flexible layout containers, breakpoint-aware CSS,
+  and viewport testing across 320px–1440px."
 
 ---
 ## 🌐 Live Demo
@@ -9,7 +13,7 @@
 * 🔗 **Frontend :** https://heng03a.github.io/jquery-todo-app/
 
 ## 📂 Repository
-* 🔗 **GitHub Repository (Frontend):**
+* 🔗 **GitHub Repository :** https://github.com/Heng03a/jquery-todo-app/blob/main/README.md
 
 ## 🛠 Tech Stack
 - HTML5
@@ -17,6 +21,24 @@
 - JavaScript
 - jQuery
 ---
+
+## Architecture Overview
+User Browser
+      │
+      ▼
+HTML / CSS Interface
+      │
+      ▼
+jQuery Application Logic
+      │
+      ▼
+Local Storage Persistence
+
+## Design Characteristics
+* Lightweight front-end application
+* Client-side data persistence
+* Responsive layout design
+* Cross-browser UI behaviour validation
 
 ## 📸 Screenshots
 
@@ -117,6 +139,15 @@ The layout maintains structural integrity across device sizes.
 -All layout and interactive functionality are working consistently across modern browsers.
 
 ## 📱 Cross-browser Reliability Proof
+### Proof Screens - Horizontal
+
+| Google | Microsoft | Firefox |
+| Chrome | Edge      | Firefox |
+|--------|-----------|---------|
+| ![Google Chrome Screenshot](docs/proof/cross-browser/Google_Chrome.png) | ![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_Edge.png) | ![Firefox Screenshot](docs/proof/cross-browser/Firefox.png) |
+
+### Proof Screens - Vertical
+
 ### Google Chrome
 ![Google Chrome Screenshot](docs/proof/cross-browser/Google_Chrome.png)
 
