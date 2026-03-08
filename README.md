@@ -1,4 +1,4 @@
-# jQuery To-Do List App
+# jQuery To-Do List App - built with **HTML, CSS, jQuery**, and **localStorage**
 
 ## 🔍 Project Overview
 
@@ -7,12 +7,19 @@
 - Implements mobile-first responsive design with flexible layout containers, breakpoint-aware CSS,
   and viewport testing across 320px–1440px."
 
+### This application provides a complete Todo management system featuring:
+* Task creation, editing, deletion
+* Completion / undo functionality
+* Sorting & filtering logic
+* Responsive UI (mobile → desktop)
+* GitHub Cloud deployment with 24/7 availability
+
 ---
 ## 🌐 Live Demo
 
 * 🔗 **Frontend :** https://heng03a.github.io/jquery-todo-app/
 
-## 📂 Repository
+## 📂 GitHub Repository
 * 🔗 **GitHub Repository :** https://github.com/Heng03a/jquery-todo-app/blob/main/README.md
 
 ## 🛠 Tech Stack
@@ -23,6 +30,8 @@
 ---
 
 ## Architecture Overview
+
+```
 User Browser
       │
       ▼
@@ -33,14 +42,21 @@ jQuery Application Logic
       │
       ▼
 Local Storage Persistence
+```
 
+## Architectural Principles
 ## Design Characteristics
+
 * Lightweight front-end application
 * Client-side data persistence
 * Responsive layout design
 * Cross-browser UI behaviour validation
 
-## 📸 Screenshots
+## 🧩 Maintainability Considerations
+
+## 📈 Scalability Design
+
+## 📸 Screenshots - ✨ Key Functional Features
 
 **Add Task**  
 ![Add Task](screenshots/add-task.png)
@@ -57,19 +73,6 @@ Local Storage Persistence
 
 ---
 
-## ✨ Key Functional Features
-* Add new tasks
-* Mark tasks complete / undo
-* Clear completed Task
-* Sort by: 
-* Newest
-* Oldest
-* Completed First
-* Active First
-* Tasks persist after page refresh using `localStorage`  
-* Modern UI with hover effects and responsive design  
-
----
 ### Responsive Design Strategy
 
 - This application uses a **mobile-first responsive CSS architecture**.
@@ -121,6 +124,17 @@ Local Storage Persistence
 * Desktop: 1024px+
 The layout maintains structural integrity across device sizes.
 
+## ✨ Key Functional Features
+* Add new tasks
+* Mark tasks complete / undo
+* Clear completed Task
+* Sort by: 
+* Newest
+* Oldest
+* Completed First
+* Active First
+* Tasks persist after page refresh using `localStorage`  
+* Modern UI with hover effects and responsive design  
 
 ### UX Enhancements
 * Status indicator legend
@@ -140,7 +154,6 @@ The layout maintains structural integrity across device sizes.
 
 ## 📱 Cross-browser Reliability Proof
 
-
 | Google Chrome | Microsoft Edge | Firefox |
 |---------------|----------------|---------|
 | ![Google Chrome Screenshot](docs/proof/cross-browser/Google_chrome.png) | ![Microsoft Edge Screenshot](docs/proof/cross-browser/Microsoft_edge.png) | ![Firefox Screenshot](docs/proof/cross-browser/Firefox.png) |
@@ -149,5 +162,30 @@ The layout maintains structural integrity across device sizes.
 ## 🚀 Challenges & Solutions
 
 
+## Deployment Details - ☁️ GitHub Deployment & CI/CD
+Deployment Flow
+* Local development
+* git add, git commit, git push
+* Live Production URL updated at GitHub
+- No manual server management required.
+* Production Characteristics
+* Always available (24/7)
+
+### ▶️ Access GitHub URL
+* Access:
+* https://heng03a.github.io/jquery-todo-app/
+
+## 🔐 Production Considerations
+
 ## 📈 Improvements / Future Enhancements
+
+
+## Application Built and maintained by :-
+
+Jialumen (Phua Kia Heng)
+
+Full Stack Web Developer
+Singapore
+
+GitHub: https://github.com/Heng03a
 
